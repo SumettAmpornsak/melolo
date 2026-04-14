@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="ดาวน์โหลด Melolo รับเงินสดสูงสุด 800 บาท" />
+    <meta name="keywords" content="ดาวน์โหลด Melolo, Melolo, เงินสด, โปรโมชั่น, Sumelit studio" />
+    <meta name="author" content="Sumelit studio" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
-    <title>Melolo - เชิญเพื่อนรับเงินสดสูงสุด 500 บาท</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Melolo - เชิญเพื่อนรับเงินสดสูงสุด 800 บาท</title>
+    <link rel="icon" href="https://i1.sndcdn.com/avatars-001082370838-sfzzb7-t240x240.jpg" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="https://i.ibb.co/93N3CJ7Y/e17578e87e5266ed1e2abc587b24d6868864736b929b5aeafd6e69f1dc5f6e63-200.webp" />
+    <!-- OG / Twitter -->
+    <meta property="og:title" content="Melolo - เชิญเพื่อนรับเงินสดสูงสุด 800 บาท" />
+    <meta property="og:description" content="ดาวน์โหลด Melolo รับเงินสดสูงสุด 800 บาท" />
+    <meta property="og:image" content="https://i.ibb.co/93N3CJ7Y/e17578e87e5266ed1e2abc587b24d6868864736b929b5aeafd6e69f1dc5f6e63-200.webp" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Melolo - เชิญเพื่อนรับเงินสดสูงสุด 800 บาท" />
+    <meta name="twitter:description" content="ดาวน์โหลด Melolo รับเงินสดสูงสุด 800 บาท" />
+    <meta name="twitter:image" content="https://i.ibb.co/93N3CJ7Y/e17578e87e5266ed1e2abc587b24d6868864736b929b5aeafd6e69f1dc5f6e63-200.webp" />
     <style>
         * {
             margin: 0;
@@ -19,7 +30,6 @@
             font-family: "Kanit", sans-serif;
         }
 
-        /* Modern CSS Reset & Base */
         body {
             background: linear-gradient(145deg, #fef9f0 0%, #fff5e6 100%);
             font-family: 'Kanit', -apple-system, BlinkMacSystemFont, 'Segoe UI';
@@ -29,14 +39,13 @@
             min-height: 100vh;
         }
 
-        /* smooth container */
         .container {
             max-width: 500px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Hero Section with gradient & card style */
+        /* Hero Section สีเหลืองส้ม */
         .hero {
             background: linear-gradient(135deg, #FFB347 0%, #ffc342 100%);
             border-radius: 48px;
@@ -71,7 +80,6 @@
             pointer-events: none;
         }
 
-        /* รูปภาพใน hero ขอบนอกกลมมน */
         .hero-image {
             display: block;
             width: 100px;
@@ -114,7 +122,7 @@
             font-size: 1rem;
             font-weight: 500;
             opacity: 0.95;
-            margin-bottom: 28px;
+            margin-bottom: 8px;
         }
 
         .reward-amount {
@@ -125,9 +133,53 @@
             font-weight: 700;
             font-size: 1.1rem;
             backdrop-filter: blur(4px);
+            margin-bottom: 12px;
         }
 
-        /* Invite Code Card */
+        /* ---------- กรอบสีเหลืองสำหรับ alert เด้ง (อยู่ใต้ข้อความ "เมื่อเพื่อนลงทะเบียนสำเร็จ") ---------- */
+        .success-alert {
+            background: #FFE87C;
+            background: linear-gradient(135deg, #FFE773 0%, #FFDD55 100%);
+            color: #b65506;
+            border-radius: 60px;
+            padding: 12px 20px;
+            margin-top: 20px;
+            font-size: 0.95rem;
+            text-align: center;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+            border: 1px solid #FFC107;
+            letter-spacing: 0.5px;
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(2);
+            transition: opacity 0.25s ease, visibility 0.25s, transform 0.25s cubic-bezier(0.34, 1.2, 0.64, 1);
+            backdrop-filter: blur(2px);
+            font-weight: 500;
+        }
+
+        /* คลาสสำหรับเด้งแบบมีชีวิตชีวา */
+        .success-alert.show {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+            animation: bounceAlert 0.4s cubic-bezier(0.34, 1.2, 0.64, 1);
+        }
+
+        @keyframes bounceAlert {
+            0% {
+                transform: scale(0.85);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Invite Card */
         .invite-card {
             background: white;
             border-radius: 32px;
@@ -139,7 +191,6 @@
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 12px;
-            transition: all 0.2s ease;
             border: 1px solid rgba(255, 140, 66, 0.2);
         }
 
@@ -272,7 +323,6 @@
             background: #e6762e;
         }
 
-        /* CTA Banner */
         .cta-banner {
             background: linear-gradient(110deg, #fff1e2 0%, #ffe4d0 100%);
             border-radius: 32px;
@@ -295,6 +345,7 @@
             margin-top: 28px;
             letter-spacing: 0.3px;
         }
+
         .footer-note-image {
             display: block;
             width: 100px;
@@ -307,11 +358,6 @@
             transition: transform 0.2s ease;
         }
 
-        .footer-note-image:hover {
-            transform: scale(1.02);
-        }
-
-        /* Toast Message */
         .toast-message {
             position: fixed;
             bottom: 30px;
@@ -336,7 +382,6 @@
             transform: translateX(-50%) scale(1);
         }
 
-        /* Responsive touch */
         @media (max-width: 480px) {
             .container {
                 padding: 0 16px;
@@ -367,7 +412,6 @@
             }
         }
 
-        /* dark mode support optional */
         @media (prefers-color-scheme: dark) {
             body {
                 background: linear-gradient(145deg, #1e2a2f 0%, #18232a 100%);
@@ -413,248 +457,229 @@
                 background: #ffa559;
                 color: #1e2f3e;
             }
+
+            .success-alert {
+                background: #FFE08C;
+                color: #a1561a;
+                border-color: #ffb347;
+            }
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <!-- Hero section: reward headline & call (เพิ่มรูปภาพขอบนอกกลมตามที่ต้องการ) -->
-        <div class="hero">
-            <!--  รูปภาพโปรโมชั่น / โลโก้ แก้ไข src ได้ตามต้องการ ขอบนอกมน -->
-            <img class="hero-image"
-                src="https://sf16-passport-sg.ibytedtos.com/img/user-avatar-alisg/e76883ce3b9e163eff00cfb2b1d51bd4~120x256.image"
-                alt="sumett studio" loading="lazy">
-            <div class="brand-badge">
-                <span>✨ Sumett studio</span>
-            </div>
-
-            <h1>เข้าร่วม Melolo<br>เชิญเพื่อน รับสูงสุด</h1>
-            <div class="reward-amount">💰 ฿ 500.00</div>
-            <div class="hero-sub">เมื่อเพื่อนลงทะเบียนสำเร็จ</div>
+<div class="container">
+    <!-- Hero section + กล่อง alert สีเหลืองเด้งอยู่ใต้บรรทัด "เมื่อเพื่อนลงทะเบียนสำเร็จ" -->
+    <div class="hero">
+        <img class="hero-image" src="https://sf16-passport-sg.ibytedtos.com/img/user-avatar-alisg/e76883ce3b9e163eff00cfb2b1d51bd4~120x256.image" alt="Sumelit studio" loading="lazy">
+        <div class="brand-badge">
+            <span>✨ Sumett studio</span>
         </div>
+        <h1>เข้าชม Melolo<br>เชิญเพื่อน รับสูงสุด</h1>
+        <div class="reward-amount">💰 ฿ 800.00</div>
+        <div class="hero-sub">เมื่อเพื่อนลงทะเบียนสำเร็จ</div>
 
-        <!-- Invite code area with copy functionality -->
-        <div class="invite-card">
-            <div class="code-info">
-                <span class="code-label">📌 รหัสเชิญของคุณ</span>
-                <span class="code-value" id="inviteCodeDisplay">BC7899318</span>
-            </div>
-            <button class="copy-btn" id="copyCodeBtn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z"
-                        fill="white" />
-                </svg>
-                คัดลอก
-            </button>
-        </div>
-
-        <!-- 3 Steps instruction (modern UI) -->
-        <div class="steps-section">
-            <div class="section-title">
-                <span>🎯 วิธีรับรางวัล</span>
-            </div>
-            <div class="step-item">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                    <div class="step-title">ดาวน์โหลด Melolo</div>
-                    <div class="step-desc">คลิกปุ่มด้านล่างเพื่อติดตั้งแอปพลิเคชัน Melolo บนมือถือของคุณ</div>
-                </div>
-            </div>
-            <div class="step-item">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                    <div class="step-title">เข้าสู่ระบบและกรอกรหัสเชิญ</div>
-                    <div class="step-desc">หลังจากติดตั้งเสร็จ ให้ลงทะเบียนหรือเข้าสู่ระบบ และป้อนรหัส
-                        <strong>BC7899318</strong></div>
-                </div>
-            </div>
-            <div class="step-item">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                    <div class="step-title">รับเงินสดทันที</div>
-                    <div class="step-desc">คุณและเพื่อนจะได้รับรางวัลเงินสดร่วมกัน! ยิ่งเชิญเยอะ ยิ่งได้เพิ่ม 🎉</div>
-                </div>
-            </div>
-
-            <!-- Download CTA inside steps -->
-            <button id="downloadMeloloBtn" class="download-btn">
-                ติดตั้ง Melolo
-            </button>
-        </div>
-
-        <!-- Extra invite reward banner -->
-        <div class="cta-banner">
-            <p>✨ เชิญเพื่อนของคุณมาเพื่อรับ ฿ 500.00 ✨</p>
-            <div style="font-size: 0.8rem; margin-top: 8px;">รับสูงสุด 500 บาทต่อการเชิญสำเร็จ</div>
-        </div>
-
-        <!-- micro footer with referral link hint (dynamic deep link) -->
-        <div class="footer-note">
-            <img class="footer-note-image"
-                src="https://play-lh.googleusercontent.com/zLxJyyx3aGLSR63NvdVv6ERGaLwIujdCRwsEi_-G-6FhCzdrIGMKXUExLQWo29OcZ4A2=w240-h480-rw"
-                alt="sumett studio" loading="lazy">
-            <span>เฉพาะผู้ได้รับคำเชิญเท่านั้น | โปรแกรมแนะนำเพื่อน Melolo</span><br>
-            <span style="font-size: 0.65rem;">รหัสโปรโมชั่น: BC7899318</span>
+        <!-- กรอบสีเหลืองเด้ง alert ทุก 10 วินาที (อยู่หลังบรรทัดเมื่อเพื่อนลงทะเบียนสำเร็จพอดี) -->
+        <div id="inviteSuccessAlert" class="success-alert">
+            ยินดีด้วย use*** ได้เชิญเพื่อนสำเร็จแล้ว
         </div>
     </div>
 
-    <!-- toast message for copy feedback -->
-    <div id="toastMsg" class="toast-message">คัดลอกรหัสเชิญแล้ว!</div>
+    <!-- Invite code area with copy functionality -->
+    <div class="invite-card">
+        <div class="code-info">
+            <span class="code-label">📌 รหัสเชิญของคุณ</span>
+            <span class="code-value" id="inviteCodeDisplay">BC7899318</span>
+        </div>
+        <button class="copy-btn" id="copyCodeBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" fill="white" />
+            </svg>
+            คัดลอก
+        </button>
+    </div>
 
-    <script>
-        (function () {
-            // ---------- ข้อมูลอ้างอิงจาก URL (คงรหัสและพารามิเตอร์หลัก) ----------
-            // inviteCode ตรงกับ invite_code ใน URL ต้นทาง: BC7899318
-            const INVITE_CODE = "BC7899318";
-            // ข้อมูล user_id และ campaign params เพื่อใช้ลิงก์ดาวน์โหลดหลัก (ถ้าต้องการให้ตรงกับ URL อ้างอิง)
-            // อ้างอิง base url ต้นฉบับ (API link) แต่เราใช้ app store / play store fallback + deep link
-            // เนื่องจาก Melolo เป็นแอปดูหนัง/ละครสั้น ในไทยสามารถลิงก์ไปยัง Play Store หรือ App Store
-            // กรณีต้องการใช้ลิงก์โปรแกรมแนะนำเต็มรูปแบบ สามารถสร้างลิงก์ลงทะเบียนพร้อม invite_code แบบ deep link
-            const BASE_DOWNLOAD_LINK = "https://play.google.com/store/apps/details?id=com.worldance.drama"; // fallback (สามารถเปลี่ยนเป็น official Melolo link ได้)
-            // สำหรับ iOS: https://apps.apple.com/th/app/melolo-short-dramas/id6737513497 (สมมุติตามแอปจริง)
-            const IOS_APP_STORE_ID = "id6737513497"; // placeholder กรณีมีลิงก์จริง
-            // แต่เพื่อให้ถูกต้องและ user experience ดีที่สุด ให้พยายาม redirect ไปยัง official landing หรือ store
-            // ในที่นี้ใช้การตรวจสอบ user agent เพื่อนำทางไป Play Store หรือ App Store
+    <!-- 3 Steps instruction -->
+    <div class="steps-section">
+        <div class="section-title"><span>🎯 วิธีรับรางวัล</span></div>
+        <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <div class="step-title">ดาวน์โหลด Melolo</div>
+                <div class="step-desc">คลิกปุ่มด้านล่างเพื่อติดตั้งแอปพลิเคชัน Melolo บนมือถือของคุณ</div>
+            </div>
+        </div>
+        <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <div class="step-title">เข้าสู่ระบบและกรอกรหัสเชิญ</div>
+                <div class="step-desc">หลังจากติดตั้งเสร็จ ให้ลงทะเบียนหรือเข้าสู่ระบบ และป้อนรหัส <strong>BC7899318</strong></div>
+            </div>
+        </div>
+        <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <div class="step-title">รับเงินสดทันที</div>
+                <div class="step-desc">คุณและเพื่อนจะได้รับรางวัลเงินสดร่วมกัน! ยิ่งเชิญเยอะ ยิ่งได้เพิ่ม 🎉</div>
+            </div>
+        </div>
+        <button id="downloadMeloloBtn" class="download-btn">ติดตั้ง Melolo</button>
+    </div>
 
-            // ฟังก์ชันสำหรับตรวจจับ platform
-            function getMobilePlatform() {
-                const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-                if (/android/i.test(userAgent)) {
-                    return "android";
-                }
-                if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                    return "ios";
-                }
-                return "other";
+    <div class="cta-banner">
+        <p>✨ เชิญเพื่อนของคุณมาเพื่อรับ ฿ 800.00 ✨</p>
+        <div style="font-size: 0.8rem; margin-top: 8px;">รับสูงสุด 800 บาทต่อการเชิญสำเร็จ</div>
+    </div>
+
+    <div class="footer-note">
+        <img class="footer-note-image" src="https://i.ibb.co/93N3CJ7Y/e17578e87e5266ed1e2abc587b24d6868864736b929b5aeafd6e69f1dc5f6e63-200.webp" alt="melolo-logo" loading="lazy">
+        <span>เฉพาะผู้ได้รับคำเชิญเท่านั้น | โปรแกรมแนะนำเพื่อน Melolo</span><br>
+        <span style="font-size: 0.65rem;">รหัสโปรโมชั่น: BC7899318</span>
+    </div>
+</div>
+
+<div id="toastMsg" class="toast-message">คัดลอกรหัสเชิญแล้ว!</div>
+
+<script>
+    (function () {
+        // ---------- รหัสเชิญคงที่ ----------
+        const INVITE_CODE = "BC7899318";
+        const IOS_APP_STORE_ID = "id6737513497";
+
+        function getMobilePlatform() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/android/i.test(userAgent)) return "android";
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) return "ios";
+            return "other";
+        }
+
+        function redirectToDownload() {
+            const platform = getMobilePlatform();
+            if (platform === "android") {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.worldance.drama&referrer=invite_code%3D" + INVITE_CODE;
+            } else if (platform === "ios") {
+                window.location.href = "https://apps.apple.com/id/app/melolo-short-movie-tv/id" + IOS_APP_STORE_ID + "?ct=invite_" + INVITE_CODE;
+            } else {
+                window.open("https://play.google.com/store/apps/details?id=com.worldance.drama", "_blank");
             }
+        }
 
-            // ดาวน์โหลดแอป – พร้อมส่งรหัสผ่าน deep link (ถ้ารองรับ)
-            function redirectToDownload() {
-                const platform = getMobilePlatform();
-                if (platform === "android") {
-                    // Android: ใช้ play store link + referrer parameter (บางแอปรองรับติดตาม invite)
-                    window.location.href = "https://play.google.com/store/apps/details?id=com.worldance.drama&referrer=invite_code%3D" + INVITE_CODE;
-                } else if (platform === "ios") {
-                    // iOS: ใช้ app store link + custom query (หากมี)
-                    window.location.href = "https://apps.apple.com/id/app/melolo-short-movie-tv/id" + IOS_APP_STORE_ID + "?ct=invite_" + INVITE_CODE;
-                    // https://apps.apple.com/id/app/melolo-short-movie-tv/id6737513497
+        // Copy + toast
+        const copyBtn = document.getElementById('copyCodeBtn');
+        const toast = document.getElementById('toastMsg');
+        function showToastMessage(msg) {
+            toast.textContent = msg || "คัดลอกรหัสเชิญแล้ว!";
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2000);
+        }
+        async function copyInviteCode() {
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(INVITE_CODE);
+                    showToastMessage("✅ คัดลอก " + INVITE_CODE + " เรียบร้อย!");
                 } else {
-                    // fallback สำหรับ Desktop หรืออื่น ๆ: แนะนำให้เปิดหน้าร้านค้า
-                    window.open("https://play.google.com/store/apps/details?id=com.worldance.drama", "_blank");
-
+                    const textarea = document.createElement('textarea');
+                    textarea.value = INVITE_CODE;
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                    showToastMessage("📋 คัดลอกรหัสเชิญแล้ว");
                 }
+            } catch (err) {
+                showToastMessage("กรุณาคัดลอกด้วยตนเอง : " + INVITE_CODE);
             }
+        }
+        if (copyBtn) copyBtn.addEventListener('click', copyInviteCode);
 
-            // คัดลอกรหัสเชิญ + toast
-            const copyBtn = document.getElementById('copyCodeBtn');
-            const codeSpan = document.getElementById('inviteCodeDisplay');
-            const toast = document.getElementById('toastMsg');
+        const downloadBtn = document.getElementById('downloadMeloloBtn');
+        if (downloadBtn) downloadBtn.addEventListener('click', (e) => { e.preventDefault(); redirectToDownload(); });
 
-            function showToastMessage(msg) {
-                toast.textContent = msg || "คัดลอกรหัสเชิญแล้ว!";
-                toast.classList.add('show');
-                setTimeout(() => {
-                    toast.classList.remove('show');
-                }, 2000);
-            }
+        const inviteCard = document.querySelector('.invite-card');
+        if (inviteCard) {
+            inviteCard.style.cursor = "pointer";
+            inviteCard.addEventListener('click', (e) => { if (!e.target.closest('.copy-btn')) copyInviteCode(); });
+        }
 
-            async function copyInviteCode() {
-                const code = INVITE_CODE;
+        // อัปเดตข้อความรหัสเชิญใน step2
+        const stepDescStrong = document.querySelector('.step-item:nth-child(2) .step-desc strong');
+        if (stepDescStrong) stepDescStrong.innerText = INVITE_CODE;
+
+        // ปุ่มแชร์ (ถ้า support)
+        const ctaBanner = document.querySelector('.cta-banner');
+        if (ctaBanner && navigator.share) {
+            const shareDiv = document.createElement('button');
+            shareDiv.innerText = "แชร์ลิงก์เชิญเพื่อน";
+            shareDiv.style.background = "#FF8C42";
+            shareDiv.style.border = "none";
+            shareDiv.style.color = "white";
+            shareDiv.style.padding = "12px 20px";
+            shareDiv.style.borderRadius = "60px";
+            shareDiv.style.fontWeight = "bold";
+            shareDiv.style.marginTop = "16px";
+            shareDiv.style.width = "100%";
+            shareDiv.style.cursor = "pointer";
+            shareDiv.style.fontSize = "0.9rem";
+            shareDiv.style.display = "flex";
+            shareDiv.style.alignItems = "center";
+            shareDiv.style.justifyContent = "center";
+            shareDiv.style.gap = "8px";
+            shareDiv.style.boxShadow = "0 4px 12px rgba(0,0,0,0.1)";
+            shareDiv.addEventListener('click', async () => {
                 try {
-                    if (navigator.clipboard && window.isSecureContext) {
-                        await navigator.clipboard.writeText(code);
-                        showToastMessage("✅ คัดลอก " + code + " เรียบร้อย!");
-                    } else {
-                        // fallback สำหรับเบราว์เซอร์เก่า
-                        const textarea = document.createElement('textarea');
-                        textarea.value = code;
-                        document.body.appendChild(textarea);
-                        textarea.select();
-                        document.execCommand('copy');
-                        document.body.removeChild(textarea);
-                        showToastMessage("📋 คัดลอกรหัสเชิญแล้ว");
-                    }
-                } catch (err) {
-                    console.error("Copy failed", err);
-                    showToastMessage("กรุณาคัดลอกด้วยตนเอง : " + code);
-                }
-            }
+                    await navigator.share({
+                        title: 'Melolo - เชิญเพื่อนรับ 800 บาท',
+                        text: `ใช้รหัสเชิญ ${INVITE_CODE} รับเงินสดสูงสุด 800 บาทเมื่อสมัคร Melolo!`,
+                        url: window.location.href,
+                    });
+                } catch (err) { copyInviteCode(); }
+            });
+            ctaBanner.appendChild(shareDiv);
+        }
+    })();
 
-            if (copyBtn) {
-                copyBtn.addEventListener('click', copyInviteCode);
-            }
+    // --------------------------------------------------------------
+    // ส่วนของ "กรอบสีเหลืองเด้ง" ทุก 3 วินาที หลังจากบรรทัด "เมื่อเพื่อนลงทะเบียนสำเร็จ"
+    // --------------------------------------------------------------
+    document.addEventListener('DOMContentLoaded', function() {
+        const alertBox = document.getElementById('inviteSuccessAlert');
+        if (!alertBox) return;
 
-            // download button handler
-            const downloadBtn = document.getElementById('downloadMeloloBtn');
-            if (downloadBtn) {
-                downloadBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    // ตัวเลือกเพิ่มเติม: ก่อน redirect แสดงการแจ้งเตือนสั้นๆ หรือ analytics
-                    redirectToDownload();
-                });
-            }
+        // ฟังก์ชันสุ่มเลข (แบบไดนามิก 4-7 หลัก ให้ลุ้น)
+        function getRandomInviteNumber() {
+    // สุ่มเลข 1-2 หลัก (1 ถึง 99)
+    return Math.floor(Math.random() * 99) + 1;
+}
 
-            // เพิ่ม interaction สำหรับผู้ใช้: กดที่ invite-card ก็คัดลอกได้ (เพิ่ม UX)
-            const inviteCard = document.querySelector('.invite-card');
-            if (inviteCard) {
-                inviteCard.style.cursor = "pointer";
-                inviteCard.addEventListener('click', (e) => {
-                    // ถ้า click ที่ปุ่ม copy ซ้ำไม่ให้เกิดสองรอบ
-                    if (e.target.closest('.copy-btn')) return;
-                    copyInviteCode();
-                });
-            }
+        // ฟังก์ชันอัปเดตข้อความและแสดง animation (เด้ง)
+        function showGoldenBounce() {
+            const randomNum = getRandomInviteNumber();
+            // ข้อความตามโจทย์ "ยินดีด้วย Use***ตามด้วยเลขแบบสุ่ม ได้เชิญเพื่อนสำเร็จแล้ว"
+            alertBox.innerHTML = `ยินดีด้วย use***${randomNum} ได้เชิญเพื่อนสำเร็จแล้ว`;
+            
+            // ลบ class show ก่อน เพื่อรีเซ็ต animation (ถ้ากำลังแสดงอยู่)
+            alertBox.classList.remove('show');
+            // Force reflow เพื่อให้ animation ทำงานอีกครั้ง
+            void alertBox.offsetWidth;
+            // เพิ่ม class show เพื่อให้ปรากฏ + เด้ง
+            alertBox.classList.add('show');
 
-            // ตรวจสอบ deep link parameter (ถ้ามี query string เช่น ?invite_code=xxxx)
-            // เพื่ออัปเดต UI หรือแสดง popup แต่ในที่นี้เรามี invite code คงที่ BC7899318 ตามภาพ
-            // นอกจากนี้ยังสามารถเพิ่ม tracking เปิดหน้าได้
-            console.log("Melolo Invite Landing Page — รหัสเชิญ", INVITE_CODE);
+            // ซ่อนอัตโนมัติหลังจาก 2.5 วินาที (ก่อนรอบถัดไป 0.5 วินาทีให้หายไป)
+            if (window.hideTimeout) clearTimeout(window.hideTimeout);
+            window.hideTimeout = setTimeout(() => {
+                alertBox.classList.remove('show');
+            }, 5000);
+        }
 
-            // dynamic update: แสดง invite code ใหม่อีกครั้งในข้อความ step
-            const stepDescStrong = document.querySelector('.step-item:nth-child(2) .step-desc strong');
-            if (stepDescStrong) {
-                stepDescStrong.innerText = INVITE_CODE;
-            }
+        // ตั้ง interval ทุก 5 วินาที -> เด้ง กรอบสีเหลือง
+        setInterval(() => {
+            showGoldenBounce();
+        }, 10000);
 
-            // ตัวเลือก: สนับสนุนแชร์ลิงก์อัตโนมัติ (Web Share API)
-            // ไม่จำเป็นสำหรับ UI หลัก แต่เพิ่ม experience
-            const ctaBanner = document.querySelector('.cta-banner');
-            if (ctaBanner && navigator.share) {
-                const shareDiv = document.createElement('button');
-                shareDiv.innerText = "แชร์ลิงก์เชิญเพื่อน";
-                shareDiv.style.background = "#FF8C42";
-                shareDiv.style.border = "none";
-                shareDiv.style.color = "white";
-                shareDiv.style.padding = "12px 20px";
-                shareDiv.style.borderRadius = "60px";
-                shareDiv.style.fontWeight = "bold";
-                shareDiv.style.marginTop = "16px";
-                shareDiv.style.width = "100%";
-                shareDiv.style.cursor = "pointer";
-                shareDiv.style.fontSize = "0.9rem";
-                shareDiv.style.display = "flex";
-                shareDiv.style.alignItems = "center";
-                shareDiv.style.justifyContent = "center";
-                shareDiv.style.gap = "8px";
-                shareDiv.style.boxShadow = "0 4px 12px rgba(0,0,0,0.1)";
-                shareDiv.addEventListener('click', async () => {
-                    try {
-                        await navigator.share({
-                            title: 'Melolo - เชิญเพื่อนรับ 500 บาท',
-                            text: `ใช้รหัสเชิญ ${INVITE_CODE} รับเงินสดสูงสุด 500 บาทเมื่อสมัคร Melolo!`,
-                            url: window.location.href,
-                        });
-                    } catch (err) {
-                        console.log("ไม่สามารถแชร์ได้");
-                        copyInviteCode();
-                    }
-                });
-                ctaBanner.appendChild(shareDiv);
-            }
-        })();
-    </script>
+        // แสดงรอบแรกทันทีหลังจากโหลด เพื่อให้เห็นผล (optional)
+        setTimeout(() => {
+            showGoldenBounce();
+        }, 500);
+    });
+</script>
 </body>
-
 </html>
